@@ -1,0 +1,65 @@
+<!-- Step 2: HTML Shell Construction -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Step 4: link to stylesheet -->
+</head>
+<body>
+
+  <!-- Step 2: Header with title and Home button -->
+  <header>
+    <h1>Game Hub</h1>
+    <a href="index.html">Home</a>
+  </header>
+
+  <!-- Step 3: Responsive Layout - CSS Grid wrapper -->
+  <div class="layout">
+
+    <!-- Step 3: Sidebar column -->
+    <aside class="sidebar">
+      <nav>
+        <!-- Step 5: Game buttons with .game-btn class | Step 10: data-path attribute -->
+        <ul>
+          <li><a href="#" class="game-btn" data-path="snake.html">Snake</a></li>
+          <li><a href="#" class="game-btn" data-path="Tetris game/tetris.html">Tetris</a></li>
+          <li><a href="#" class="game-btn" data-path="pingpong.html">bat and ball</a></li>
+          <li><a href="#" class="game-btn" data-path="Alien shooter/.html">Alien Shooter</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Step 3: Game stage column -->
+    <main class="game-stage">
+
+      <!-- Step 7: Panel with toolbar and iframe -->
+      <div class="panel">
+
+        <!-- Step 7: Toolbar displays current game title -->
+        <div class="toolbar">
+          <span id="currentGame" class="game-title">Game Hub</span> <!-- Step 9: id for JS selection -->
+        </div>
+
+        <!-- Step 8: Placeholder shown until a game is selected -->
+        <div id="placeholder" class="placeholder"> <!-- Step 9: id for JS selection -->
+          <p>👾 Select a game to play</p>
+        </div>
+
+        <!-- Step 7: iframe hosts the game | Step 8: hidden by default | Step 9: id for JS selection -->
+        <iframe
+          id="stage"
+          class="game-frame hidden"
+          src=""
+          title="Game">
+        </iframe>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script> <!-- Phase 2: Hub Logic -->
+</body>
+</html>
